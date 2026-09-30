@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            border-collapse: collapse;
+            width: 50%;
+        }
+        td{
+            border:1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <table id="tabla">
+    <script>
+        let columnas=parseInt(prompt("dime cuantas columas quieres"));
+        let filas=parseInt(prompt("ahora el numero de filas"));
+
+        for(let i=0;i<filas;i++){
+            document.write('<tr>');
+            for(let j=0;j<columnas;j++){
+                document.write('<td>&nbsp;</td>');
+            }
+            document.write('</tr>');
+        }
+    </script>
+    </table>
+</body>
+</html>
