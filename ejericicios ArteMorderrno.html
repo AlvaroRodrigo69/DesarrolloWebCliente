@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //let rojo=Math.random()*256;
+        //let verde=Math.random()*256;
+        //let azul=Math.random()*256;
+        //let x=parseInt(Math.random()*screen.width);
+        //let y=parseInt(Math.random()*screen.height);
+        for(let i=0;i<2000;i++){
+            let rojo=Math.random()*256;
+            let verde=Math.random()*256;
+            let azul=Math.random()*256;
+            let x=parseInt(Math.random()*screen.width);
+            let y=parseInt(Math.random()*screen.height);
+            document.write(`<div style="background-color: rgb(${rojo}, ${verde}, ${azul}); height: 50px; width: 50px; position:absolute; top:${y}px; left:${x}px;">&nbsp;</div>`);
+        }
+        //temporizador para que se recargue automaticamente cada 5 segundos
+        //setTimeout(()=>{
+        //    location.reload();
+        //},5000);
+    </script>
+</body>
+</html>

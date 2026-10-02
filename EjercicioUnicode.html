@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table >
+        <script>
+            let codigo=0;
+            while(codigo<=99999){
+                document.write('<tr>');
+                for(let i=0;i<10;i++){
+                    document.write(`<td>${codigo}</td>`);
+                    document.write(`<td>&#${codigo}</td>`);
+                    codigo++;
+                }
+                document.write('</tr>');
+            }
+        </script>
+    </table>
+</body>
+</html>
