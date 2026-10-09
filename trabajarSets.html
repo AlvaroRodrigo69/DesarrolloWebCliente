@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <ol>
+        <li>AÑADIR ELEMENTOS AL SET</li>
+    </ol>
+</head>
+<body>
+    <script>
+        let op, valor
+        let nombres=new Set(["Emilio","carlos","pedro","Manuel"]);
+        while(true){
+            op=parseInt(prompt("Elige una opcion"));
+            switch(op){
+                case 1:
+                    let nombre=prompt("escribe un nombre");
+                    nombres.add(nombre);
+                    break;
+            }
+        }
+    </script>
+</body>
+</html>

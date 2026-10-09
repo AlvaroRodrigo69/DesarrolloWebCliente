@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ol>
+        <li>AÑADIR UN ELEMENTO AL ARRAY</li>
+        <li>SUSTITUIR UN ELEMENTO DEL ARRAY</li>
+        <li>EXTRAER ELEMENTOS DE UN ARRAY</li>
+        <li>VISUALIZAR UN DETERMINADO ELEMENTO</li>
+        <li>INVERTIR EL ARRAY</li>
+    </ol>
+    <script>
+        let arr=["lunes", "martes", "miercoles", "jueves", "viernes", "sabado", "domingo"]
+        let op=prompt("selecciona una opción")
+        console.log(arr)
+        while(true){
+            switch(op){
+                case "1":
+                    let op2=prompt("1.-AL PRINCIPIO\n2.-AL FINAL\n3.-POR EL MEDIO")
+                    let elemento=prompt("NUEVO ELEMENTO")
+                    if(op2=="1"){    
+                        arr.unshift(elemento)
+                    }else if(op2=="2"){
+                        arr.push(elemento)
+                    }else{
+                        let op3=parseInt(prompt("Posicion del elemento: "))
+                        arr.splice(op3,0,elemento)
+                    }
+                    break;
+                case "2":
+                    let indice =parseInt(prompt("Que elemento quieres sustituir (inidce)"))
+                    let valor =prompt("escriba el nuevo contenido de esa celda")
+                    arr.splice(indice,1,valor)
+                    console.log(arr)
+                    break;
+                case "3":
+                    let indice2=parseInt(prompt("Que elemento quieres eliminar (inidce)"))
+                    let basura =arr.splice(indice2, 1)
+                    break;
+                case "4":
+                    let indice3=parseInt(prompt("que elemento quieres ver (indice)"))
+                    alert(arr[indice3])
+                    break;
+                case "5":
+                    arr.reverse()
+                    console.log(arr)
+                default:
+                    alert("ERROR: itroduce un valor del 1 al 4 por favor")
+                    //location.reload()
+                    break;
+            }
+        }
+    </script>
+</body>
+</html>
