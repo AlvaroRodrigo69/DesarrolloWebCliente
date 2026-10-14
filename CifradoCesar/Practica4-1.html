@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let mensaje=prompt("Escribe tu mensaje")
+        let clave =parseInt(prompt("dime el numero de clave"))
+        let cifrado=""
+        let codigo=0
+        for (let i=0;i<mensaje.length;i++){
+            codigo=mensaje.charCodeAt(i)+clave
+            cifrado += String.fromCharCode(codigo)
+        }
+        alert(`mensaje original ${mensaje}\n mensaje cifrado ${cifrado}`)
+    </script>
+</body>
+</html>
