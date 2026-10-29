@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let array=["oso","marsopa","Aguila","Ñu", "boa","Nutria"]
+        function ordenPersonal(a, b){
+            return a.length-b.length
+        }
+        let ordenar=function(a, b){
+            return b.length-a.length
+        }
+        array.sort(ordenPersonal)
+        array.sort(function(a,b){
+            return b.length-a.length
+        })
+        array.sort((a,b)=>(a.length-b.length))
+        array.sort(ordenar)
+    </script>
+</body>
+</html>

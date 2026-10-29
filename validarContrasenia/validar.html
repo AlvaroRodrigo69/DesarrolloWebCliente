@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let texto=promt("escriba contraseña:")
+        let codigo
+        let mayusEspeciales=new Set("Ñ","Á","É","Í","Ó","Ú")
+        let minusEspeciales=new Set("ñ","á","é","í","ó","ú")
+        let [mayus, minus, num, chara]=[false,false,false,false]
+        for (let i = 0; i < texto.lenth; i++) {
+            codigo=texto.charCodeAt(i)
+            if(codigo>64 && codigo<91 || mayusEspeciales.has(texto[i])){
+                mayus=true
+            }
+            if(codigo>96 && codigo<122 || minusEspeciales.has(texto[i])){
+                minus=true
+            }
+            if(codigo>47 && codigo<58){
+                num=true
+            }
+            if(!(codigo>47 && codigo<58) && !(codigo>96 && codigo<122) && !(codigo>64 && codigo<91)){
+                chara=true
+            }
+            /*switch (codigo) {
+                case (codigo>64 && codigo<91 || mayusEspeciales.has(texto[i])):
+                    mayus=true
+                    break;
+                case (codigo>96 && codigo<122 || minusEspeciales.has(texto[i])):
+                    minus=true
+                    break;
+                case (codigo>47 && codigo<58):
+                    num=true
+                    break;
+                case (!(codigo>47 && codigo<58) && !(codigo>96 && codigo<122) && !(codigo>64 && codigo<91)):
+                    chara=true
+                    break;
+            }*/
+        }
+        console.log(mayus?"hay al menos una mayuscula":"no hay ninguna mayuscula")
+        console.log(minus?"hay al menos una minuscula":"no hay ninguna minuscula")
+        console.log(num?"hay al menos un numero":"no hay ningun numero")
+        console.log(mayus?"hay al menos un caracter especial":"no hay ningun caracter especial")
+    </script>
+</body>
+</html>

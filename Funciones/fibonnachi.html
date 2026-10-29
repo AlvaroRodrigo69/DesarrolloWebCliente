@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let num=parseInt(prompt("dime cuantos numeros de fibonnachi quieres"))
+        //funciona
+        //let[n1, n2]=[0,1]
+        //let n3
+        // for (let i=0;i<num;i++){
+        //     document.write(n1+" ")
+        //     n3=n1+n2
+        //     n3=n2
+        //     n2=n1
+        // }
+
+        function fibo(n){
+            if(n==1){
+                //document.write(n+" ")
+                return 0
+            }else if(n==2){
+                //document.write(n+" ")
+                return 1
+            }else{
+                let suma=fibo(n-1)+fibo(n-2)
+                //resultado+=suma+" "
+                //document.write(suma)
+                return suma
+            }
+        }
+        document.write(fibo(num))
+
+
+
+        function fibo2(n){
+            if(n==1){
+                return 0
+            }else if(n==2){
+                return 1
+            }else{
+                let suma=fibo(n-1)+fibo(n-2)
+                return suma
+            }
+        }
+    </script>
+</body>
+</html>

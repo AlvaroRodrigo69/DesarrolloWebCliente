@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let filas= parseInt(prompt("cuantas filas quieres: "))
+        let columnas= parseInt(prompt("cuantas columnas quieres: "))
+
+        function crearTabla(f=10,c=4){
+            document.write("<table border='1px solid black'>")
+            for (let i=0;i<f;i++) {
+                document.write("<tr>")
+                for (let j=0;j<c;j++) {
+                    document.write(`<td> ${i}:${j}</td>`)
+                }
+                document.write("<tr>")
+            }
+            documnet.write("</table>")
+        }
+        crearTabla(filas, columnas)
+    </script>
+</body>
+</html>
