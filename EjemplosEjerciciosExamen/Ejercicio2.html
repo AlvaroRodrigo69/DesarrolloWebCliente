@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let jugar=confirm('Quieres jugar al bingo?')
+        let numAparecidos
+        if(!jugar){
+            alert("HASTA LA VISTA")
+        }else{
+            let num
+            let aparecidos=new Set()
+            while(numAparecidos<90){
+                do{
+                    let num=parseInt(Math.random()*90+1)
+                }while(aparecidos.has(num))
+                aparecidos.add(num)
+                document.write(`${num},&nbsp`)
+                alert(num)
+                numAparecidos++
+            }
+            alert('partida finalizada')
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let texto=prompt("escribe un mensaje")
+        let cantidad=[]
+        let apariciones=[]
+        let texto2=[...texto]
+        for(letra of texto2){
+            if(!apariciones.includes(letra)){
+                apariciones.push(letra)
+                cantidad.push(1)
+            }else{
+                let posicion=apariciones.indexOf(letra)
+                cantidad[posicion]=cantidad[posicion]+1
+            }
+        }
+        for(let i=0; i<apariciones.length;i++){
+            document.write(`${apariciones[i]}------->${cantidad[i]}<br>`)
+        }
+    </script>
+</body>
+</html>
